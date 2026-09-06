@@ -15,6 +15,11 @@ df = df.fillna(df.median())
 X = df.drop("SalePrice", axis=1)
 y = df["SalePrice"]
 
+# Feature Scaling
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+X = scaler.fit_transform(X)
+
 # Hyperparameters
 n_estimators = 150
 learning_rate = 0.05
