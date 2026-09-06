@@ -15,6 +15,9 @@ df = df.fillna(df.median())
 X = df.drop("SalePrice", axis=1)
 y = df["SalePrice"]
 
+# Normalization
+X = (X - X.mean()) / X.std() 
+
 # Hyperparameters
 n_estimators = 150
 learning_rate = 0.05
