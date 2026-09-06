@@ -40,7 +40,7 @@ pip install -r requirements.txt
 #    bathrooms, age_years, distance_to_city_km, price)
 
 # 5. Run the training script
-python src/train_23L-2551.py
+python src/train_model_23L-2551.py
 ```
 
 The trained model is serialized with `joblib` and saved to
