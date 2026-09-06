@@ -15,6 +15,10 @@ df = df.fillna(df.median())
 X = df.drop("SalePrice", axis=1)
 y = df["SalePrice"]
 
+# Hyperparameters
+n_estimators = 150
+learning_rate = 0.05
+
 print("Training model...")
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X, y)
